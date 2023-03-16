@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
 use App\Models\Agent;
 use App\Models\Property;
 use App\Models\Testimonial;
@@ -15,6 +16,6 @@ class HomeController extends Controller
         $testimonials = Testimonial::inRandomOrder()->take(9)->get();
         $properties = Property::with(['images'])->where('is_popular', true)->inRandomOrder()->take(9)->get();
 
-        return view('welcome', compact('agents', 'testimonials', 'properties'));
+        return Inertia::render('Home', compact('agents', 'testimonials', 'properties'));
     }
 }

@@ -122,11 +122,5 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
 import AppLayout from "@/Layouts/AppLayout.vue";
-import AOS from "aos";
-
-onMounted(() => {
-  AOS.init()
-})
 </script>

@@ -22,14 +22,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="{{ asset('fonts/icomoon/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}" />
-
-    <link rel="stylesheet" href="{{ asset('css/tiny-slider.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/aos.css') }}" />
-{{--    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />--}}
-     @routes
-    @vite(['resources/js/app.js'])
+    @routes
+    @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
     @inertiaHead
 
     <title inertia>
